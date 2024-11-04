@@ -3,43 +3,47 @@ package University;
 public class Course {
 
     private String courseName;
-    private int courseNumber;
-    private String courseDescription;
-
+    private int studentNumber;
+    private String courseInstructor;
 
     //class constructor
-    public Course(String courseName,int courseNumber, String courseDescription){
+    public Course(String courseName, int studentNumber, String courseInstructor) {
         this.courseName = courseName;
-        this.courseNumber = courseNumber;
-        this.courseDescription = courseDescription;
+        this.studentNumber = studentNumber;
+        this.courseInstructor = courseInstructor;
     }
 
-    public void setCourseName(String newCourseName){
+    //set and get course name
+    public void setCourseName(String newCourseName) {
         this.courseName = newCourseName;
     }
 
-    public String getCourseName(){
+    public String getCourseName() {
         return this.courseName;
     }
 
-    public void setCourseNumber(int newCourseNumber){
-        this.courseNumber = newCourseNumber;
+    //set and get number of students
+    public void setStudentNumber(int newStudentNumber) {
+        this.studentNumber = newStudentNumber;
     }
 
-    public int getCourseNumber(){
-        return this.courseNumber;
+    public int getStudentNumber() {
+        return this.studentNumber;
     }
 
-    public void setCourseDescription(String newCourseDescription){
-        this.courseDescription = newCourseDescription;
+    //set and get course instructor
+    public void setCourseInstructor(String newCourseInstructor) {
+        this.courseInstructor = newCourseInstructor;
     }
 
-    public String getCourseDescription(){
-        return this.courseDescription;
+    public String getCourseInstructor() {
+        return this.courseInstructor;
     }
 
-    public void printAll(){
-        System.out.println("Course Name: "+ this.courseName + ", Course number: " + this.courseNumber + ", Course description: " + this.courseDescription);
+    @Override
+    public String toString() {
+        return "Course Name: " + courseName +
+                ", Number of Students: " + studentNumber +
+                ", course instructor name: " + courseInstructor;
     }
-
 }
